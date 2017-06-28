@@ -15,6 +15,10 @@ import { MyHomeComponent } from './my-home/my-home.component';
 import { QuoteItemComponent } from './quote-item/quote-item.component';
 
 import{ CharactersService} from './characters.service';
+import{ CounterService} from './counter.service';
+
+import { MyCounterComponent } from './my-counter/my-counter.component';
+import { MySecondCounterComponent } from './my-second-counter/my-second-counter.component';
 
 // Routing Table
 const routes: Routes = [
@@ -38,7 +42,9 @@ const routes: Routes = [
     ContactListComponent,
     MyAboutComponent,
     MyHomeComponent,
-    QuoteItemComponent
+    QuoteItemComponent,
+    MyCounterComponent,
+    MySecondCounterComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [CharactersService],
+  providers: [CharactersService, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
